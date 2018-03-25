@@ -36,6 +36,23 @@ bool ok;
 QString btcWalletKey = vault.getValue("btc-walled-key", &ok).toString();
 ```
 
+To change the password at any time (the store must be unlocked, of course):
+```cpp
+bool success = vault.changePassword("mynewstrongpassword");
+```
+
+After you finished accessing the values, just lock() it to ensure no encryption keys or any data left in memory:
+```cpp
+vault.lock()
+```
+
+## Notes
+
+* Do not consider this solution to be a high-performant component. The goal was to build a highly-secure KV-store, aimed to hold relatively low amount of data.
+* All methods are synchronous and all write operations will commit all changes to the disk.
+* You cannot enumerate keys by design, because getting all keys are insecure operation.
+* You will need OpenSSL dev libs to be installed in your environment for this code to be built.
+
 ## License
 
 GPLv3
