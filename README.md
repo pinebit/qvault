@@ -1,6 +1,6 @@
 # QVault
 
-QVault is the encrypted key-value store library for Qt/C++.
+*QVault is the encrypted key-value store library for Qt/C++.*
 
 The library is using OpenSSL for data encryption, specifically:
 - PKCS5_PBKDF2_HMAC_SHA1 for key derivation,
