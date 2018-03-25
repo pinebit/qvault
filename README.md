@@ -35,3 +35,9 @@ vault.setValue("btc-wallet-key", btcWalletKey);
 bool ok;
 QString btcWalletKey = vault.getValue("btc-walled-key", &ok).toString();
 ```
+
+## License
+
+GPLv3
+
+If you are interested in building your very custom secure store component of any kind, contact me: pinebit@gmail.com
